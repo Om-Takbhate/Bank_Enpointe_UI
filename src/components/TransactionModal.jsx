@@ -6,7 +6,7 @@ const TransactionModal = () => {
         <>
             
             <dialog id="my_modal_3" className="modal">
-                <div className="modal-box">
+                <div className="modal-box ml-6">
                     <form method="dialog">
                         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     </form>

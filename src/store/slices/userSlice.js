@@ -1,4 +1,4 @@
-const {createSlice} = require('@reduxjs/toolkit')
+import {createSlice} from  '@reduxjs/toolkit'
 
 
 const userSlice = createSlice({
@@ -16,5 +16,6 @@ const userSlice = createSlice({
     }
 })
 
-module.exports = userSlice.reducer
-module.exports.userActions = userSlice.actions;
+export default userSlice.reducer
+
+export const {addUser, removeUser} = userSlice.actions

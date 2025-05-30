@@ -1,33 +1,42 @@
 import axios from 'axios'
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { BASE_URL } from '../utils/constants'
+import {useDispatch} from 'react-redux'
+import { addUser } from '../store/slices/userSlice'
 
 const Navbar = () => {
 
-  // const getProfileOfUser = async() => {
-  //   try {
-  //     const res = await axios.get(BASE_URL + ' ')
-  //   }
-  //   catch(err) {
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
 
-  //   }
-  // }
+  const getProfileOfUser = async() => {
+    try {
+      const res = await axios.get(BASE_URL + '/api/users/profile', {withCredentials: true})
+      const data = res.data
+
+      dispatch(addUser(data))
+    }
+    catch(err) {
+      navigate('/login')
+    }
+  }
 
   useEffect(() => {
-    
+    // getProfileOfUser()
   } , [])
 
 
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <Link to="/" className="btn btn-ghost text-xl">Enpointe Bank 🏦</Link>
       </div>
       <div className="flex-none">
         <label className="swap swap-rotate mr-2">
           {/* this hidden checkbox controls the state */}
-          <input type="checkbox" className="theme-controller" value="dark" />
+          <input type="checkbox" className="theme-controller" value="light" />
 
           {/* sun icon */}
           <svg
