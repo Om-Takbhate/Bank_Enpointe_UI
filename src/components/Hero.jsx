@@ -7,7 +7,7 @@ const Hero = () => {
         <div className="hero bg-base-200 min-h-[91%]">
             <div className="hero-content text-center">
                 <div className="max-w-md">
-                    <h1 className="text-5xl font-bold">Welcome to Enpoint IO Bank 🏦</h1>
+                    <h1 className="text-xl sm:text-5xl font-bold">Welcome to Enpoint IO Bank 🏦</h1>
                     <p className="py-6">Deposit, Withdraw, and Track Every Rupee — All in One Place.
                     </p>
                     <div className='flex  gap-2 flex-col sm:flex-row justify-center'>
