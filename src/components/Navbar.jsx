@@ -1,7 +1,24 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { BASE_URL } from '../utils/constants'
 
 const Navbar = () => {
+
+  // const getProfileOfUser = async() => {
+  //   try {
+  //     const res = await axios.get(BASE_URL + ' ')
+  //   }
+  //   catch(err) {
+
+  //   }
+  // }
+
+  useEffect(() => {
+    
+  } , [])
+
+
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="flex-1">

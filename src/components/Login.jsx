@@ -17,7 +17,6 @@ const Login = () => {
             const username = usernameRef.current.value
             const role = isRoleBanker ? "banker" : "customer"
 
-
             const res = await axios.post(BASE_URL + "/api/auth/login",{
                 email, password, role, username
             }, {withCredentials: true})
